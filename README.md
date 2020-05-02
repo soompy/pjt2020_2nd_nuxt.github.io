@@ -1,7 +1,7 @@
 # banapresso-order-nuxt
 
-> 2020년 두번째 프로젝트
-> 바나프레소 모바일 주문 앱을 Nuxtjs로 구현하기 프로젝트
+> 2020년 두번째 프로젝트 <
+> 바나프레소 모바일 주문 앱을 Nuxtjs로 구현하기
 
 ## Build Setup
 
