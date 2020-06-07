@@ -13,7 +13,11 @@
 </template>
 
 <script>
-
+  export default {
+    head: {
+      title: '바나프레소'
+    }
+  }
 </script>
 
 <style lang="scss" scoped>
@@ -21,6 +25,7 @@ $primaryColor: #f66b91;
 ul{margin: 0;padding: 0;}
 li{list-style: none;}
 a{color: #1a1a1a;}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
 
 .container{
   display: flex;
@@ -28,6 +33,7 @@ a{color: #1a1a1a;}
   background: url(../components/icetea.jpg) center top no-repeat;
   background-size: cover;
   height: 100vh;
+  font-family: 'Noto Sans KR', sans-serif;
   h1{
     text-align: center;
     margin-top: 28px;
