@@ -1,72 +1,96 @@
 <template>
   <div class="container">
-    <div>
-      <logo />
-      <h1 class="title">
-        banapresso-order-nuxt
-      </h1>
-      <h2 class="subtitle">
-        My smashing Nuxt.js project
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
-    </div>
+    <h1><img src="../components/logo.png" alt="바나프레소 로고" class="logo"></h1>
+    <div class="link_box">
+      <span class="here">Here &#129047;</span>
+      <ul class="links">
+        <li><nuxt-link to="/order">주문</nuxt-link></li>
+        <li><nuxt-link to="/member">멤버십</nuxt-link></li>
+        <li><nuxt-link to="/mypage">내 정보</nuxt-link></li>
+      </ul>
+    </div>      
   </div>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
 
-export default {
-  components: {
-    Logo
-  }
-}
 </script>
 
-<style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
+<style lang="scss" scoped>
+$primaryColor: #f66b91;
+ul{margin: 0;padding: 0;}
+li{list-style: none;}
+a{color: #1a1a1a;}
+
+.container{
   display: flex;
+  flex-direction: column;
+  background: url(../components/icetea.jpg) center top no-repeat;
+  background-size: cover;
+  height: 100vh;
+  h1{
+    text-align: center;
+    margin-top: 28px;
+    .logo{
+      width: 22%;
+    }
+  }
+}
+
+.link_box {
   justify-content: center;
-  align-items: center;
-  text-align: center;
+  margin-top: auto;
+  padding: 40px 0;
+  .here{
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    color: #999;
+    background: url(../components/rabbit.png) 62% top no-repeat;
+    background-size: contain;
+    padding: 10px 0;
+    margin: 10px 0;
+    animation-name: click;
+    animation-duration: 1.6s;
+    animation-iteration-count: infinite;
+    transition-timing-function: ease;
+  }
+  @keyframes click {
+    0%{color: #999;margin-bottom: 10px;}
+    50%{color: $primaryColor;margin-bottom: 15px;}
+    100%{color: #999;margin-bottom: 10px;}
+  }
+  .links{
+    display: flex;
+    justify-content: center;
+    li{
+      margin: 0 10px;
+      background: #fff;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      box-shadow: 2px 2px 4px 0px #ccc;
+      a{
+        display: flex;
+        width: 100%;
+        height: 100%;  
+        align-items: center;
+        justify-content: center;   
+        color: #1a1a1a;
+        font-size: 14px;
+        &:hover{
+          font-weight: bold;
+        } 
+      }
+    }
+  }
 }
 
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
+@media (max-width: 1200px){
+  .container{
+    max-width: 100% !important;
+    padding-right: 0;
+    padding-left: 0;
+  }
 }
 </style>
