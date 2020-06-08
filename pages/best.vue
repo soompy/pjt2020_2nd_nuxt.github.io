@@ -1,61 +1,112 @@
 <template>
   <div class="container">
-    <div>
       <header id="header">
         <ul class="gnb">
           <li><nuxt-link to="/best">Best</nuxt-link></li>
-          <li><nuxt-link to="/all">All</nuxt-link></li>
-          <li><nuxt-link to="/index">Coffee</nuxt-link></li>
-          <li><nuxt-link to="/tea">Tea</nuxt-link></li>
-          <li><nuxt-link to="/set">Set Menu</nuxt-link></li>
-          <li><nuxt-link to="/bread">Bread</nuxt-link></li>
-          <li><nuxt-link to="/juice">Juice</nuxt-link></li>
+          <li><nuxt-link to="/best">All</nuxt-link></li>
+          <li><nuxt-link to="/best">Coffee</nuxt-link></li>
+          <li><nuxt-link to="/best">Tea</nuxt-link></li>
+          <li><nuxt-link to="/best">Set Menu</nuxt-link></li>
+          <li><nuxt-link to="/best">Bread</nuxt-link></li>
+          <li><nuxt-link to="/best">Juice</nuxt-link></li>
         </ul>
       </header>
-      <logo />
-      <h1 class="title">
-        banapresso-order-nuxt
-      </h1>
-      <h2 class="subtitle">
-        My smashing Nuxt.js project
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
+      
+      <section class="menuWrp">
+        <div class="menu_box">  
+          <nuxt-link to="/payment">
+            <span class="menu_img"><img src="../components/menu_paniniset.png" alt="세트"></span>
+            <p class="menu">베이컨파니니세트<span class="eng">Bacon Panini Set</span></p>
+            <strong class="price">5,000~5,300원</strong>
+          </nuxt-link>
+        </div>
+        <div class="menu_box">  
+          <nuxt-link to="/payment">
+            <span class="menu_img"><img src="../components/menu_paniniset.png" alt="세트"></span>
+            <p class="menu">베이컨파니니세트<span class="eng">Bacon Panini Set</span></p>
+            <strong class="price">5,000~5,300원</strong>
+          </nuxt-link>
+        </div>
+        <div class="menu_box">  
+          <nuxt-link to="/payment">
+            <span class="menu_img"><img src="../components/menu_paniniset.png" alt="세트"></span>
+            <p class="menu">베이컨파니니세트<span class="eng">Bacon Panini Set</span></p>
+            <strong class="price">5,000~5,300원</strong>
+          </nuxt-link>
+        </div>
+      </section>     
+      <section class="menuWrp">
+        <div class="menu_box">  
+          <nuxt-link to="/payment">
+            <span class="menu_img"><img src="../components/menu_paniniset.png" alt="세트"></span>
+            <p class="menu">베이컨파니니세트<span class="eng">Bacon Panini Set</span></p>
+            <strong class="price">5,000~5,300원</strong>
+          </nuxt-link>
+        </div>
+        <div class="menu_box">  
+          <nuxt-link to="/payment">
+            <span class="menu_img"><img src="../components/menu_paniniset.png" alt="세트"></span>
+            <p class="menu">베이컨파니니세트<span class="eng">Bacon Panini Set</span></p>
+            <strong class="price">5,000~5,300원</strong>
+          </nuxt-link>
+        </div>
+        <div class="menu_box">  
+          <nuxt-link to="/payment">
+            <span class="menu_img"><img src="../components/menu_paniniset.png" alt="세트"></span>
+            <p class="menu">베이컨파니니세트<span class="eng">Bacon Panini Set</span></p>
+            <strong class="price">5,000~5,300원</strong>
+          </nuxt-link>
+        </div>
+      </section>  
+      <section class="menuWrp">
+        <div class="menu_box">  
+          <nuxt-link to="/payment">
+            <span class="menu_img"><img src="../components/menu_paniniset.png" alt="세트"></span>
+            <p class="menu">베이컨파니니세트<span class="eng">Bacon Panini Set</span></p>
+            <strong class="price">5,000~5,300원</strong>
+          </nuxt-link>
+        </div>
+        <div class="menu_box">  
+          <nuxt-link to="/payment">
+            <span class="menu_img"><img src="../components/menu_paniniset.png" alt="세트"></span>
+            <p class="menu">베이컨파니니세트<span class="eng">Bacon Panini Set</span></p>
+            <strong class="price">5,000~5,300원</strong>
+          </nuxt-link>
+        </div>
+        <div class="menu_box">  
+          <nuxt-link to="/payment">
+            <span class="menu_img"><img src="../components/menu_paniniset.png" alt="세트"></span>
+            <p class="menu">베이컨파니니세트<span class="eng">Bacon Panini Set</span></p>
+            <strong class="price">5,000~5,300원</strong>
+          </nuxt-link>
+        </div>
+      </section> 
     </div>
-  </div>
+  
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
-
-export default {
-  components: {
-    Logo
+  export default {
+    head: {
+      title: '메뉴선택 바나프레소',
+      meta: [
+        { hid: 'description', name: 'description', content: '바나프레소 모바일 결제' }
+      ],
+      noscript: [
+        { innerHTML: 'Body No Scripts', body: true }
+      ]
+    }
   }
-}
 </script>
 
 <style lang="scss" scoped>
 $primaryColor: #f66b91;
-// .container{min-height: auto !important;}
 ul{margin: 0;padding: 0;}
 li{list-style: none;}
+a{text-decoration: none;color: #1a1a1a;}
 
 #header{
+  width: 575px;
   background: $primaryColor;
   .gnb{
     display: flex;
@@ -75,33 +126,72 @@ li{list-style: none;}
   }
 }
 
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+.container{
   display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
+  width: 575px;
+  height: 100vh;
+  font-family: 'Noto Sans KR', sans-serif;
+  .menuWrp{
+    display: flex;
+    width: 575px;
+    .menu_box{
+      display: flex;
+      flex: 1;
+      align-items: center;
+      flex-direction: column;
+      padding: 1vw;
+      .menu_img{
+        display: block;
+        text-align: center;
+      }
+      .menu{
+        font-size: 14px;
+        margin: 10px 0;
+      }
+      .eng{
+        display: block;
+        font-size: 12px;
+        color: #666;
+      }
+      .price{
+        color: $primaryColor;
+        font-size: 14px;
+      }
+    }
+  }
 }
 
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
-
-@media (max-width: 1200px){
+@media (max-width: 575px){
+  #header{
+    overflow: scroll;
+    width: 100%;
+    .gnb{
+      width: 140%;
+      font-size: 14px;
+    }
+  }
   .container{
-    max-width: 100% !important;
+    width: 100%;
     padding-right: 0;
     padding-left: 0;
+    .menuWrp{
+      width: 100%;
+      .menu_box{
+        padding: 2vw 1vw;
+        a{
+          width: 100%;
+          .menu_img{
+            width: 80%;
+            height: 80%;
+            margin: auto;
+            img{
+              width: 100%;
+            }
+          }
+          .menu,.price{font-size: 12px;}
+        }
+      }
+    }
   }
 }
 </style>

@@ -3,7 +3,7 @@
     <div class="inner">
       <h2>어디서 드시겠습니까?</h2>
       <p>환경보호에 동참해주세요.</p>
-      
+       
       <div class="order_box">
         <nuxt-link to="/best">
             <strong>테이크아웃<em>자원재활용법에 따라 매장 내 일회용 컵(플라스틱 컵) 사용이 금지되어 있습니다.</em></strong>
@@ -38,6 +38,19 @@
   </div>
 </template>
 
+<script>
+  export default {
+    head: {
+      title: '메뉴선택 바나프레소',
+      meta: [
+        { hid: 'description', name: 'description', content: '바나프레소 모바일 결제' }
+      ],
+      noscript: [
+        { innerHTML: 'Body No Scripts', body: true }
+      ]
+    }
+  }
+</script>
 
 <style lang="scss" scoped>
 $primaryColor: #f66b91;
@@ -51,9 +64,11 @@ a{color: #1a1a1a;}
     position: relative;
     display: flex;
     background: $primaryColor;
-    font-family: 'Noto Sans KR', sans-serif;
+    width: 575px;
     height: 100vh;
+    font-family: 'Noto Sans KR', sans-serif;
     .inner{
+        width: 96%;
         margin: auto;
     }
     h2{
@@ -111,11 +126,11 @@ a{color: #1a1a1a;}
         position: absolute;
         left: 50%;
         top: 50%;
-        width: 30%;
+        width: 92%;
         height: auto;
         background: #fff;
         text-align: center;
-        margin-left: -15%;
+        margin-left: -46%;
         margin-top: -15%;
         h3{
             color: $primaryColor;
@@ -144,21 +159,28 @@ a{color: #1a1a1a;}
     }
 }
 
-
 @media (max-width: 1200px){
   .container{
-    max-width: 100% !important;
-    padding-right: 0;
-    padding-left: 0;
+     width: 100%;
+     padding-right: 0;
+     padding-left: 0;
     .inner{
-        padding: 0 16px;
+        width: 92%;
     }
-     .popup_box{
+    .popup_box{
         left: 50%;
         top: 50%;
-        width: 92vw;
-        margin-left: -46vw;
-        margin-top: -40vw;
+        width: 92%;
+        margin-left: -46%;
+        margin-top: -25%;
+    }
+  }
+}
+
+@media (max-width: 575px){
+  .container{
+    .popup_box{
+        margin-top: -36%;
     }
   }
 }

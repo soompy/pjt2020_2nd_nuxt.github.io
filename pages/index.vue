@@ -15,7 +15,13 @@
 <script>
   export default {
     head: {
-      title: '바나프레소'
+      title: '모바일 바나프레소',
+      meta: [
+        { hid: 'description', name: 'description', content: '바나프레소 모바일 결제' }
+      ],
+      noscript: [
+        { innerHTML: 'Body No Scripts', body: true }
+      ]
     }
   }
 </script>
@@ -30,6 +36,7 @@ a{color: #1a1a1a;}
 .container{
   display: flex;
   flex-direction: column;
+  width: 575px;
   background: url(../components/icetea.jpg) center top no-repeat;
   background-size: cover;
   height: 100vh;
@@ -92,9 +99,9 @@ a{color: #1a1a1a;}
   }
 }
 
-@media (max-width: 1200px){
+@media (max-width: 575px){
   .container{
-    max-width: 100% !important;
+    width: 100%;
     padding-right: 0;
     padding-left: 0;
   }
