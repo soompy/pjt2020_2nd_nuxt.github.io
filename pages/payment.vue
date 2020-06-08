@@ -60,9 +60,6 @@ export default{
   }
 }
 </script>
-<script>
-  
-</script>
 
 <style lang="scss" scoped>
 $primaryColor: #f66b91;
