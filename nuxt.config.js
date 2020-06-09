@@ -33,7 +33,13 @@ module.exports = {
   ** Nuxt.js dev-modules
   */
   buildModules: [
+    // Simple usage
+    '@nuxtjs/vuetify', 
   ],
+  vuetify: {
+    // With options
+    /* module options */
+  },
   /*
   ** Nuxt.js modules
   */
@@ -48,7 +54,22 @@ module.exports = {
     /*
     ** You can extend webpack config here
     */
-    extend (config, ctx) {
+   
+    // extend (config, ctx) {
+    // }
+
+    extend (config, { isDev, isClient }) {
+      if (isDev && isClient) {
+        config.module.rules.push({
+          enforce: 'pre',
+          test: /\.(js|vue)$/,
+          loader: 'eslint-loader',
+          exclude: /(node_modules)/
+        })
+      }
     }
+
+
+    
   }
 }
